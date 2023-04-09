@@ -1,0 +1,29 @@
+{
+  "ghammazApp": {
+    "produit": {
+      "home": {
+        "title": "Produits",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Produit を追加",
+        "createOrEditLabel": "Produitを追加または編集",
+        "notFound": "No Produits found"
+      },
+      "created": "A new Produit is created with identifier {{ param }}",
+      "updated": "A Produit is updated with identifier {{ param }}",
+      "deleted": "A Produit is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Produit {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Produit"
+      },
+      "id": "ID",
+      "idProd": "Id Prod",
+      "nomProd": "Nom Prod",
+      "prixProd": "Prix Prod",
+      "livraison": "Livraison",
+      "client": "Client",
+      "restaurant": "Restaurant"
+    }
+  }
+}

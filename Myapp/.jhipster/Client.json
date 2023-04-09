@@ -1,0 +1,63 @@
+{
+  "applications": "*",
+  "changelogDate": "20230409195732",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "client",
+  "fields": [
+    {
+      "fieldName": "idClient",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "prenomClient",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nomClient",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "adresseClient",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "pattern"],
+      "fieldValidateRulesPattern": "[a-zA-Z0-9.]+@[a-zA-Z0-9.]+.[a-z]+"
+    },
+    {
+      "fieldName": "telCLient",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "pattern"],
+      "fieldValidateRulesPattern": "(+\\d+)?[0-9 ]+"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Client",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "produit",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "produit",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "livraison",
+      "otherEntityRelationshipName": "client",
+      "relationshipName": "livraison",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

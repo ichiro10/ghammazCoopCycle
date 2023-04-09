@@ -1,0 +1,57 @@
+{
+  "applications": "*",
+  "changelogDate": "20230409195734",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "livraison",
+  "fields": [
+    {
+      "fieldName": "idLivraison",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "prixLivraison",
+      "fieldType": "Float",
+      "fieldValidateRules": ["required", "min"],
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "duree",
+      "fieldType": "Instant",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "adresseLivraison",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Livraison",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "livraison",
+      "relationshipName": "client",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "produit",
+      "otherEntityRelationshipName": "livraison",
+      "ownerSide": false,
+      "relationshipName": "produit",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "livreur",
+      "otherEntityRelationshipName": "livraison",
+      "relationshipName": "livreur",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

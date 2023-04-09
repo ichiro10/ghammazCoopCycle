@@ -1,0 +1,57 @@
+entity Client {
+    idClient Integer required unique
+    prenomClient String required
+    nomClient String required minlength(2)
+    adresseClient String required minlength(2)
+    email String required unique pattern(/[a-zA-Z0-9.]+@[a-zA-Z0-9.]+.[a-z]+/)
+    telCLient String required unique pattern(/(+\d+)?[0-9 ]+/) 
+}
+
+entity Livreur {
+    idLivreur Integer required unique
+    nomLivreur String required minlength(2)
+    prenomLivreur String required minlength(2)
+    telLivreur String required unique pattern(/(+\d+)?[0-9 ]+/)
+}
+
+entity Livraison {
+    idLivraison Integer required unique
+    prixLivraison Float required min(0)
+	duree Instant required
+    adresseLivraison String required
+}
+
+entity Restaurant {
+	idRest Integer required unique
+    nomRest String required
+    adresseRest String required maxlength(50)
+}
+
+entity Produit {
+	idProd Integer required unique
+    nomProd String required
+    prixProd Float required min(0)
+}
+
+
+entity Association{
+    idAsso Integer required unique
+    nomAsso String required
+}
+
+relationship OneToOne {
+    Produit to Livraison
+}
+
+relationship OneToMany {
+	Livreur to Livraison,
+    Association to Livreur,
+    Client to Produit,
+    Restaurant to Produit
+}
+
+relationship ManyToOne {
+    Livraison to Client
+}
+
+dto * with mapstruct

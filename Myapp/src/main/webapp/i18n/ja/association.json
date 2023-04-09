@@ -1,0 +1,26 @@
+{
+  "ghammazApp": {
+    "association": {
+      "home": {
+        "title": "Associations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Association を追加",
+        "createOrEditLabel": "Associationを追加または編集",
+        "notFound": "No Associations found"
+      },
+      "created": "A new Association is created with identifier {{ param }}",
+      "updated": "A Association is updated with identifier {{ param }}",
+      "deleted": "A Association is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Association {{ id }}を削除してもよろしいですか？"
+      },
+      "detail": {
+        "title": "Association"
+      },
+      "id": "ID",
+      "idAsso": "Id Asso",
+      "nomAsso": "Nom Asso",
+      "livreur": "Livreur"
+    }
+  }
+}

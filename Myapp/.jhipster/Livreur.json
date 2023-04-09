@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20230409195733",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "livreur",
+  "fields": [
+    {
+      "fieldName": "idLivreur",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required", "unique"]
+    },
+    {
+      "fieldName": "nomLivreur",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "prenomLivreur",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "minlength"],
+      "fieldValidateRulesMinlength": "2"
+    },
+    {
+      "fieldName": "telLivreur",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "unique", "pattern"],
+      "fieldValidateRulesPattern": "(+\\d+)?[0-9 ]+"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Livreur",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "livraison",
+      "otherEntityRelationshipName": "livreur",
+      "relationshipName": "livraison",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "association",
+      "otherEntityRelationshipName": "livreur",
+      "relationshipName": "association",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

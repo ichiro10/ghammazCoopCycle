@@ -1,0 +1,26 @@
+{
+  "ghammazApp": {
+    "association": {
+      "home": {
+        "title": "Associations",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Association",
+        "createOrEditLabel": "Créer ou éditer un Association",
+        "notFound": "Aucun Association trouvé"
+      },
+      "created": "Un nouveau Association a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Association avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Association avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Association {{ id }} ?"
+      },
+      "detail": {
+        "title": "Association"
+      },
+      "id": "ID",
+      "idAsso": "Id Asso",
+      "nomAsso": "Nom Asso",
+      "livreur": "Livreur"
+    }
+  }
+}
